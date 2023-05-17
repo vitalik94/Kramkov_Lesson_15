@@ -25,13 +25,14 @@ def print_type_data(fn):
 @print_type_data
 def functions(ar):
     sumNum = 0
-    # 1
+
+# 1
     if isinstance(ar, tuple):
         for i in ar:
             if isinstance(i, str):
                 sumNum += len(i)
         print(f'Длина всех строк в кортеже {sumNum}')
-    # 2
+# 2
     elif isinstance(ar, list):
         chars = 0
         nums = 0
@@ -45,7 +46,7 @@ def functions(ar):
             elif isinstance(i, int):
                 nums += 1
         print(f'Количество букв и чисел в списке {chars, nums}')
-    # 3
+# 3
     elif isinstance(ar, int):
         nums = 0
         while ar > 0:
@@ -53,7 +54,7 @@ def functions(ar):
                 nums += 1
             ar = (ar - ar % 10) // 10
         print(f'Колличество нечетных цифр в числе {nums}')
-
+#4
     elif isinstance(ar, str):
         chars = 0
         for i in ar:
